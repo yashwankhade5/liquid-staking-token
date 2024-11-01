@@ -1,9 +1,11 @@
+require('dotenv').config();
 import express from 'express';
+import { burnTokens, mintTokens, sendNativeTokens } from './mintTokens';
 
 const app = express();
 
 
-app.post('/helius', (req, res) => {
+app.post('/helius', async(req, res) => {
     const fromAddress = req.body.fromAddress;
     const toAddress = req.body.toAddress;
     const amount = req.body.amount;
