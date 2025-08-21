@@ -5,7 +5,7 @@ import { burnTokens, mintTokens, sendNativeTokens } from './mintTokens';
 const app = express();
 
 const Httpresponse = 
-{  "nativeTransfers": [ { "amount": 100000000, "fromUserAccount": "GmqBh3hA6Nndg9egWCGv4YbgMFbwhrrUrwdMFwFQuE8b", "toUserAccount": "B4ouTYDDw9cvDwWC9Cgqa6Ah8cDhV3RAWgr73AamiHSk" } ],  }
+{  "nativeTransfers": [ { "amount": 1000000000, "fromUserAccount": "GmqBh3hA6Nndg9egWCGv4YbgMFbwhrrUrwdMFwFQuE8b", "toUserAccount": "B4ouTYDDw9cvDwWC9Cgqa6Ah8cDhV3RAWgr73AamiHSk" } ],  }
 const VAULT =`B4ouTYDDw9cvDwWC9Cgqa6Ah8cDhV3RAWgr73AamiHSk`
 
 app.post('/helius', async(req, res) => {

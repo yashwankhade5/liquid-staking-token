@@ -9,7 +9,7 @@ export const mintTokens = async (fromAddress: string, toAddress: string, amount:
     
    const privatkey = Keypair.fromSecretKey(bs58privatekey)
    
-    const c = mintTo(connection,privatkey,new PublicKey(TOKEN_MINT_ADDRESS),new PublicKey(fromAddress),privatkey,amount)
+    const c = await mintTo(connection,privatkey,new PublicKey(TOKEN_MINT_ADDRESS),new PublicKey("9T4j1h9e9MiAABLARbEgrruote6g6Fd4EgobmJvsVE3p"),privatkey,amount)
     console.log("Minting tokens",c);
 }
 
