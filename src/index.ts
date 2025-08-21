@@ -4,11 +4,20 @@ import { burnTokens, mintTokens, sendNativeTokens } from './mintTokens';
 
 const app = express();
 
+const Httpresponse = 
+{  "nativeTransfers": [ { "amount": 100000000, "fromUserAccount": "GmqBh3hA6Nndg9egWCGv4YbgMFbwhrrUrwdMFwFQuE8b", "toUserAccount": "B4ouTYDDw9cvDwWC9Cgqa6Ah8cDhV3RAWgr73AamiHSk" } ],  }
+const VAULT =`B4ouTYDDw9cvDwWC9Cgqa6Ah8cDhV3RAWgr73AamiHSk`
 
 app.post('/helius', async(req, res) => {
-    const fromAddress = req.body.fromAddress;
-    const toAddress = req.body.toAddress;
-    const amount = req.body.amount;
+    const incomingtx = Httpresponse.nativeTransfers.find(x=>x.toUserAccount===VAULT)
+    if (!incomingtx) {
+        res.json({"processed":"pr"})
+        return
+    }
+    console.log("hit the route")
+    const fromAddress = incomingtx.fromUserAccount;
+    const toAddress = incomingtx.toUserAccount;
+    const amount = incomingtx.amount;
     const type = "received_native_sol";
 
     if (type === "received_native_sol") {
