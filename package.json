@@ -4,12 +4,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"npx tsc -b && node dist/index.js"
+    "dev": "npx tsc -b && node dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "1. Complete the functions in `mintTokens.ts` and `burnTokens.ts` to mint and burn tokens.\r 2. Complete the function in `sendNativeTokens.ts` to send native tokens.\r 3. Run the server using `npm run start` and test the functionality using the `curl` command.",
   "dependencies": {
     "@solana/spl-token": "^0.4.13",
     "@solana/web3.js": "^1.98.4",
@@ -18,5 +18,14 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "typescript": "^5.6.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashwankhade5/liquid-staking-token.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yashwankhade5/liquid-staking-token/issues"
+  },
+  "homepage": "https://github.com/yashwankhade5/liquid-staking-token#readme"
 }

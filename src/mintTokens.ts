@@ -1,7 +1,7 @@
 import { mintTo, getOrCreateAssociatedTokenAccount, getAssociatedTokenAddress, getAccount,burn } from "@solana/spl-token";
 import { Connection, Keypair, PublicKey, SystemProgram, Transaction,sendAndConfirmTransaction } from "@solana/web3.js";
 import bs58 from "bs58";
-import { PRIVATE_KEY, TOKEN_MINT_ADDRESS } from "./address";
+import { PRIVATE_KEY, TOKEN_MINT_ADDRESS, } from "./address";
 
 export const mintTokens = async (fromAddress: string, toAddress: string, amount: number) => {
     const connection = new Connection("https://api.devnet.solana.com");
